@@ -9,7 +9,12 @@ public class Calculator {
 		Scanner sc = new Scanner(System.in);
 		String str = sc.next();
 
+		sc.close();
+		
 		StringParser parse = new StringParser();	
+		Calculates calc = new Calculates();
+		
+		
 		
 		
 
