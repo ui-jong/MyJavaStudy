@@ -1,7 +1,5 @@
 package simpleCalculator;
 
-import java.util.ArrayList;
-
 public class OperatorImpl implements Operator {
 
 	@Override

@@ -1,19 +1,16 @@
 package simpleCalculator;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Calculator {
 	
-	public String detector(String[][] token) {
+	public String calculate(String[][] token) {
 		//5+6*6/6+5 또는 
-		//5+6*6+6*5 처럼
 		//곱하기가 섞여있을때 어떻게 할까?
-		
-		ArrayList<String> number = new ArrayList<>();
-		ArrayList<String> operator = new ArrayList<>();
-		
-
-		ArrayList<Double> result = new ArrayList<>(); //계산된 값 담을 배열
+			
+		List<String> number = new ArrayList<>();
+		List<String> operator = new ArrayList<>();
 		
 		OperatorImpl calc = new OperatorImpl();
 		
@@ -25,6 +22,7 @@ public class Calculator {
 		for(int i = 0 ; i < token[1].length ; i++) {
 			operator.add(token[1][i]);
 		} //이러면 +,*,/,+ 하지만 계산은 6*6먼저 해야 함.. 인덱스를 뽑을까?
+		
 		
 		//곱하기나 나눗셈 먼저 계산
 		for(int i = 0 ; i < operator.size() ; i++) {
@@ -41,7 +39,7 @@ public class Calculator {
 
 				}
 				
-		     number.set(i, Double.toString(res));
+		     number.set(i, Double.toString(res)); // [5,36,6,6,5]
 			 number.remove(i+1);// [5,36,6,5]
 		     operator.remove(i); // [+,*,/,+] 에서 [+,/,+]
 		     i--; //remove로 인덱스 작아짐

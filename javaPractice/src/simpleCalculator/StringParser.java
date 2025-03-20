@@ -3,15 +3,16 @@ package simpleCalculator;
 import java.util.ArrayList;
 
 public class StringParser {
-	
+			
 	public String[][] stringParse(String input) {
 		
+		ArrayList<String> operators = new ArrayList<>(); 
+
 		input = input.replaceAll(" ", "");
 		
 		String[] parsedNum = input.split("[\\+\\-\\*\\/]");
 		String[] parsedOPR = input.split("\\d+");
 		
-		ArrayList<String> operators = new ArrayList<>(); 
 
 		for(String opr : parsedOPR) {
 			operators.add(opr);
