@@ -2,7 +2,7 @@ package simpleCalculator;
 
 import java.util.ArrayList;
 
-public class Calculates implements Calculate {
+public class OperatorImpl implements Operator {
 
 	@Override
 	public double add(double num1, double num2) {

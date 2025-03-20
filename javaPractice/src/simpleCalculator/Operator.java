@@ -2,7 +2,7 @@ package simpleCalculator;
 
 import java.util.ArrayList;
 
-public interface Calculate {
+public interface Operator {
 	
 	public double add(double num1, double num2);
 	public double div(double num1, double num2);

@@ -15,7 +15,7 @@ public class Calculator {
 
 		ArrayList<Double> result = new ArrayList<>(); //계산된 값 담을 배열
 		
-		Calculates calc = new Calculates();
+		OperatorImpl calc = new OperatorImpl();
 		
 		
 		for(int i = 0 ; i < token[0].length ; i++) {
