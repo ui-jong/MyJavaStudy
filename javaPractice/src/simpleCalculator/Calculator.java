@@ -1,5 +1,6 @@
 package simpleCalculator;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Calculator {
@@ -12,12 +13,11 @@ public class Calculator {
 		sc.close();
 		
 		StringParser parse = new StringParser();	
-		Calculates calc = new Calculates();
+		AutoDetector dtc = new AutoDetector();
 		
-		
-		
-		
-
+		System.out.println(Arrays.deepToString(parse.stringParse(str)));
+		System.out.println(dtc.detector(parse.stringParse(str)));
+				
 	}
 
 }

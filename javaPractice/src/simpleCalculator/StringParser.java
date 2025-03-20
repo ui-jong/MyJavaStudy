@@ -4,17 +4,27 @@ import java.util.ArrayList;
 
 public class StringParser {
 	
-	public ArrayList<String> stringParse(String input) {
-				
-		ArrayList<String> parsedData = new ArrayList<>();
+	public String[][] stringParse(String input) {
 		
-		String[] splited = input.replaceAll(" ", "").split("[\\+\\-\\*\\/]");
+		input = input.replaceAll(" ", "");
 		
-		for (String token : splited ) {
-			parsedData.add(token);
+		String[] parsedNum = input.split("[\\+\\-\\*\\/]");
+		String[] parsedOPR = input.split("\\d+");
+		
+		ArrayList<String> operators = new ArrayList<>(); 
+
+		for(String opr : parsedOPR) {
+			operators.add(opr);
 		}
 		
-		return parsedData;
+		operators.remove(0);
+		
+		String[] opr = operators.toArray(new String[0]);
+
+			
+		String[][] token = {parsedNum,opr};
+	
+		return token;
 		
 	}
 
