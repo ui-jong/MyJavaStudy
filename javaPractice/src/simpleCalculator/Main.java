@@ -1,4 +1,4 @@
-package stringCalculatorV2;
+package simpleCalculator;
 
 import java.util.Scanner;
 
@@ -15,7 +15,7 @@ public class Main {
 		Calculator cal = new Calculator();
 		
 //		System.out.println(Arrays.deepToString(parse.stringParse(str)));
-//		System.out.println(cal.calculate(parse.stringParse(str)));
+		System.out.println(cal.calculate(parse.stringParse(str)));
 				
 	}
 

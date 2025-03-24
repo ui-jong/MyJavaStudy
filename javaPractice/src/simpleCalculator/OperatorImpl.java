@@ -1,4 +1,4 @@
-package stringCalculatorV2;
+package simpleCalculator;
 
 public class OperatorImpl implements Operator {
 
