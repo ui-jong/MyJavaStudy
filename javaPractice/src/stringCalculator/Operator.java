@@ -1,4 +1,4 @@
-package simpleCalculator;
+package stringCalculator;
 
 import java.util.ArrayList;
 
